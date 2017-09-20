@@ -1,4 +1,6 @@
-# SNOMED CT Snapshot REST API [![Build Status](https://travis-ci.org/IHTSDO/sct-snapshot-rest-api.svg?branch=master)](https://travis-ci.org/IHTSDO/sct-snapshot-rest-api) [![Code Climate](https://codeclimate.com/github/IHTSDO/sct-snapshot-rest-api/badges/gpa.svg)](https://codeclimate.com/github/IHTSDO/sct-snapshot-rest-api) [![Join the chat at https://gitter.im/IHTSDO/sct-snapshot-rest-api](https://badges.gitter.im/IHTSDO/sct-snapshot-rest-api.svg)](https://gitter.im/IHTSDO/sct-snapshot-rest-api?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# SNOMED CT Snapshot REST API
+
+[![Build Status](https://travis-ci.org/IHTSDO/sct-snapshot-rest-api.svg?branch=master)](https://travis-ci.org/IHTSDO/sct-snapshot-rest-api) [![Code Climate](https://codeclimate.com/github/IHTSDO/sct-snapshot-rest-api/badges/gpa.svg)](https://codeclimate.com/github/IHTSDO/sct-snapshot-rest-api) [![Join the chat at https://gitter.im/IHTSDO/sct-snapshot-rest-api](https://badges.gitter.im/IHTSDO/sct-snapshot-rest-api.svg)](https://gitter.im/IHTSDO/sct-snapshot-rest-api?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![license](https://img.shields.io/badge/license-Apache2-blue.svg)]()
 
 Lightweight mongo server with a rest API for SNOMED CT Snapshot views, powered by the MEAN stack, <http://mean.io/>, (Node.js, Express & MongoDB).
 
@@ -30,6 +32,8 @@ Once you have the SNOMED CT Files in RF2 format (standard release files) you can
 
 <https://github.com/IHTSDO/rf2-to-json-conversion>
 
+**NOTE** ensure you are using versions 1.3 and above of the conversion tool to create the JSON files. Older versions will not work.
+
 ## Access the server
 
 The server will start listening automatically on port 3000\. You can test a REST call by goint to a Web Browser and navigating to this link:
@@ -40,7 +44,7 @@ This call will retrieve the data for the concept Clinical Finding (finding), ide
 
 ## REST API docs
 
-Browse the interactive documentation of the v2 REST API here:
+Browse the REST API documentation of here:
 
 <http://ihtsdo.github.io/sct-snapshot-rest-api/api.html>
 
