@@ -770,7 +770,7 @@ The concept details describe all the reference sets where a concept is member in
             }
 
 
-## Search [/v2/snomed/{edition}/{release}/descriptions?query={query}&searchMode={mode}&lang={language}&statusFilter={statusFilter}&skipTo={skipTo}&returnLimit={returnLimit}&normalize={normalize}&semanticFilter={semanticFilter}&moduleFilter={moduleFilter}&langFilter={langFilter}&refsetFilter={refsetFilter}]
+## Search [/v2/snomed/{edition}/{release}/descriptions?query={query}&searchMode={mode}&lang={language}&statusFilter={statusFilter}&skipTo={skipTo}&returnLimit={returnLimit}&normalize={normalize}&semanticFilter={semanticFilter}&moduleFilter={moduleFilter}&refsetFilter={refsetFilter}]
 Performs a text search over the database, selecting mode and other limits.
 The search results include the matching descriptions plus a filter descriptor object, allowing to further refining the search by providing new limits.
 
@@ -779,12 +779,11 @@ The search results include the matching descriptions plus a filter descriptor ob
     + release (required, string, `v20170731`) ... Identifier for the release, usually the release effective time preceded with a `v`.
     + query (required, string, `asthma`) ... String terms to use a query.
     + mode (optional, string, `partialMatching`) ... Search mode, either `partialMatching`, `fullText` or `regex`.
-    + language (optional, string, `english`) ... Languge for the search, only required for `fullText` mode.
+    + language (optional, string, `english`) ... Language for the search, only required for `fullText` mode.
     + statusFilter (optional, string, `english`) ... Value to filter out undesired status, possible values are `activeOnly`, `inactiveOnly` or `activeAndInactive`.
-    + semanticFilter (optional, string, `findng`) ... Value to restrict search results to specififc an semantic area, possible values are `finding`, `disorder`, `procedure`, etc.
-    + moduleFilter (optional, string, `900000000000207008`) ... Value to restrict search results to an specififc module, possible values are any valid ModuleId.
-    + langFilter (optional, string, `en`) ... Value to restrict search results to an specififc language code, possible values are any valid language code.
-    + refsetFilter (optional, string, `450970008`) ... Value to restrict search results to an specififc reference set, possible values are any valid Reference Set conceptId.
+    + semanticFilter (optional, string, `finding`) ... Value to restrict search results to specific an semantic area, possible values are `finding`, `disorder`, `procedure`, etc.
+    + moduleFilter (optional, string, `900000000000207008`) ... Value to restrict search results to an specific module, possible values are any valid ModuleId.
+    + refsetFilter (optional, string, `450970008`) ... Value to restrict search results to an specific reference set, possible values are any valid Reference Set conceptId.
     + returnLimit (optional, number, `5`) ... Number of results to retrieve in one call.
     + skipTo (optional, number, `0`) ... Number of results to skip, used along with limit to paginate.
     + normalize (optional, string, `true`) ... Wether to normalize search terms or not, should be aligned with index normalization option in the database.
