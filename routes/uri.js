@@ -13,7 +13,7 @@ router.get('/', function(req, res,next) {
     var uri = req.query.uri;
     console.log("uri:" + uri);
     var format = "json";
-    if (uri.indexOf("http://snomed.info/") > 0) {
+    if (uri.indexOf("http://snomed.info/") > -1) {
 
         var bar = uri.lastIndexOf("/");
         var id = uri.substring(bar + 1);
