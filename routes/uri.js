@@ -12,11 +12,11 @@ var logger = new (winston.Logger)({
 router.get('/', function(req, res,next) {
     var uri = req.query.uri;
     console.log("uri:" + uri);
+    var format = "json";
     if (uri.indexOf("http://snomed.info/") < 0) {
 
         var bar = uri.lastIndexOf("/");
         var id = uri.substring(bar + 1);
-        var format = "json";
         if (req.query.format) {
             format = req.query.format.toLowerCase();
         }
