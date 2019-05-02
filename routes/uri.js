@@ -38,7 +38,7 @@ router.get('/', function(req, res,next) {
 
             return;
         }
-    } else if (uri.indexOf("ama-ihmi.org/") < 0) {
+    } else if (uri.indexOf("ama-ihmi.org/") > -1) {
         //ama-ihmi.org/terminology/valueSet/sdoh2_icd10cm_zcodes_value_set
         var db = process.env.TS_MONGO_DB;
 
