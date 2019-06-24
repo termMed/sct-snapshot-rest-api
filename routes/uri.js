@@ -48,7 +48,13 @@ router.get('/', function(req, res,next) {
                 if (data) {
                     res.status(200);
                     res.header('Content-Type', 'application/json');
-                    res.send(data);
+                    if (data[0]){
+                        if (data[0]._id) {
+                            delete data[0]._id;
+                        }
+                        res.send(JSON.stringify(data[0],null,4));
+                    }
+                    res.send({});
                 } else {
                     res.status(200);
                     res.send(err);
